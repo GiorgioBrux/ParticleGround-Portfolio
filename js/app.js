@@ -10,6 +10,7 @@ function hslToHex(h, s, l) {
 }
 
 const color = hslToHex(Math.floor(Math.random() * 360) + 1, 100, 50);
+const is_mobile = /Mobi|Android/i.test(navigator.userAgent);
 
 particlesJS('particles-js', {
         "particles": {
@@ -43,7 +44,7 @@ particlesJS('particles-js', {
             "detect_on": "canvas",
             "events": {
                 "onhover": {"enable": true, "mode": "repulse"},
-                "onclick": {"enable": true, "mode": "push"},
+                "onclick": {"enable": !is_mobile, "mode": "push"},
                 "resize": true
             },
             "modes": {
