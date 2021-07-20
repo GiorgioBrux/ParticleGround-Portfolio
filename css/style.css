@@ -73,6 +73,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  white-space: nowrap;
 }
 h2 {
   font-size: 50px;
